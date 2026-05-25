@@ -222,12 +222,14 @@ python monitor_experiments.py [path/to/your/experiments_dir]
 This provides a real-time dashboard displaying the status, progress, and best results for all studies. The dashboard view is continuously updated, giving you a live overview of all your experiments.
 
 **Graceful Termination:**
-- To stop an experiment, create a file with any of these substrings in its name: `_exit`, `_end`, `_terminate`, or `_kill`.
-- Place the file in the experiment, study, or trial directory. The experiment will terminate all processes at the corresponding level as gracefully as possible.
-- Example:
-  ```bash
-  touch experiments/transformer_optimization/base_architecture_v1/stop_terminate
-  ```
+
+To stop an experiment from the monitoring dashboard, enter the listed experiment, study, or trial ID (for example `E1`, `S2`, or `T3`) and confirm the prompt.
+
+You can also stop an experiment manually by creating a file with `_exit`, `_end`, `_terminate`, or `_kill` in its name and placing it in the experiment, study, or trial directory. EasyTuna will terminate all processes at the corresponding level as gracefully as possible.
+
+```bash
+touch experiments/transformer_optimization/base_architecture_v1/stop_terminate
+```
 
 ## Advanced Features
 
