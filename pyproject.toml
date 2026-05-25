@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easytuna"
+version = "0.1.0"
+description = "Practical Optuna experiment runner for constrained, reproducible hyperparameter optimization."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Yordan Yordanov" }
+]
+dependencies = [
+  "optuna>=3.0.0",
+]
+
+[project.optional-dependencies]
+botorch = [
+  "optuna-integration[botorch]",
+]
+demo = [
+  "numpy",
+  "torch",
+  "transformers",
+  "datasets",
+]
+all = [
+  "optuna-integration[botorch]",
+  "numpy",
+  "torch",
+  "transformers",
+  "datasets",
+]
+
+[tool.setuptools.packages.find]
+include = ["easytuna*"]

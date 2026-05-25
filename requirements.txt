@@ -1,0 +1,6 @@
+# Core runtime dependencies for EasyTuna.
+#
+# Optional extras are defined in pyproject.toml:
+#   pip install ".[botorch]"  # cBO / BoTorch sampler support
+#   pip install ".[demo]"     # demo_model_train.py dependencies
+optuna>=3.0.0
