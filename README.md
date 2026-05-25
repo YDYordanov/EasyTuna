@@ -309,8 +309,8 @@ Run multiple seeds per trial for robust evaluation:
 
 Stop experiments gracefully from any node:
 
-- **Command Line**: Create a file with `_exit`, `_end`, `_terminate`, or `_kill` in its name in the experiment, study, or trial directory.
-- **Programmatic**: Create the termination signal file in the appropriate directory.
+- **Via Monitoring Dashboard**: Enter the listed experiment, study, or trial ID (for example `E1`, `S2`, or `T3`) and confirm the prompt.
+- **Manual**: Create a file with `_exit`, `_end`, `_terminate`, or `_kill` in its name in the experiment, study, or trial directory.
 
 ## Tips for Best Results
 
